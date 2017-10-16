@@ -53,6 +53,11 @@ Here is a quick overview of most of the commands that have been added
     <td>Will create (in insert mode) two of the symbol behind \ and place user inside of them</td>
   </tr>
   <tr>
+    <td>Vim</td>
+    <td>CTRL+A</td>
+    <td>Will yank entire file (normal mode)</td>
+  </tr>
+  <tr>
     <td>i3-gaps</td>
     <td>Mod+Shift+P (+M)</td>
     <td>Will increase (+P) or decrease (+M) outer gap size</td>
