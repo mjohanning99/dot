@@ -8,3 +8,9 @@ delete
 
 cd gm
 shell mkdir -p ; mv %s $_ #gp to move selected files to a specified directory
+shell mkdir -p starwars; mv %s $_ #gp to move selected files to a specified directory
+shell mkdir -p simon; mv %s $_ #gp to move selected files to a specified directory
+shell mkdir -p outrun; mv %s $_ #gp to move selected files to a specified directory
+shell mkdir -p landscape; mv %s $_ #gp to move selected files to a specified directory
+:q
+qw
