@@ -18,6 +18,8 @@ The .vimrc contains several plug-ins that are used with Vundle. Vundle should al
 `:PluginInstall`. 
 This will automatically install all the plug-ins and you don't need to worry about doing anything else.
 
+If this doesn't work, I would recommend re-downloading Vundle by simple cloning the repository and moving it into the right place by typing `git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim` into your terminal. Afterwards, please try to run `:PluginInstall` once again.
+
 ### How to get my set-up
 In order to use these config files, you should firstly create a backup of your current config files (I recommend using git and Github for that as well. If that is too complicated, just rename them to something like configname.copy). After having created a backup of all important config files, you simply need to replace all all your files with the ones in this repository.
 _**DISCLAIMER! USE AT OWN RISK!** I cannot be made responsible for any harm done to your computer_
