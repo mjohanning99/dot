@@ -39,6 +39,8 @@ imap <leader>' ''<ESC>i
 imap <leader>" ""<ESC>i
 imap <leader>( ()<ESC>i
 imap <leader>[ []<ESC>i
+nmap <C-a> ggVGy<CR> 
+"Ctrl + A will yank entire file
 
 "Colour stuff
 syntax on
@@ -51,3 +53,4 @@ set tabstop=4
 set number "line numbers enabled
 set hlsearch "highlight all occurences of a word that was searched
 "let mapleader="-"
+

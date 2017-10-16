@@ -6,7 +6,6 @@ open_with
 shell mkdir -p starwars; mv %s $_
 delete
 cd gm
-shell mkdir -p starwars; mv %s $_ #gp to move selected files to a specified directory
 shell mkdir -p simon; mv %s $_ #gp to move selected files to a specified directory
 shell mkdir -p outrun; mv %s $_ #gp to move selected files to a specified directory
 shell mkdir -p landscape; mv %s $_ #gp to move selected files to a specified directory
@@ -25,3 +24,4 @@ shell mkdir ; mv %s $_ #gp to move selected files to a specified directory
 __q
 1
 
+shell mkdir -p starwars; mv %s $_ #gp to move selected files to a specified directory
