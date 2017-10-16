@@ -22,6 +22,7 @@ If this doesn't work, I would recommend re-downloading Vundle by simple cloning 
 
 ### How to get my set-up
 In order to use these config files, you should firstly create a backup of your current config files (I recommend using git and Github for that as well. If that is too complicated, just rename them to something like configname.copy). After having created a backup of all important config files, you simply need to replace all all your files with the ones in this repository. Some config files have my username included, which means that if you try to run said config file you will most likely run into an error. Should you run into an error when running a config file or should something not work as intended, please check the config file and see if it includes my username and remove it.
+
 _**DISCLAIMER! USE AT OWN RISK!** I cannot be made responsible for any harm done to your computer_
 
 ## Fonts
