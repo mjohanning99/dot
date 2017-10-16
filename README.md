@@ -53,6 +53,11 @@ Here is a quick overview of most of the commands that have been added
     <td>Start selected executeable file (exe) or make file executeable (mexe)</td>
   </tr>
   <tr>
+    <td>Ranger</td>
+    <td>bk</td>
+    <td>Creates a backup file (filename.ending_bk) for the files selected</td>
+  </tr>
+  <tr>
     <td>Vim</td>
     <td>\' \" \( \[</td>
     <td>Will create (in insert mode) two of the symbol behind \ and place user inside of them</td>
