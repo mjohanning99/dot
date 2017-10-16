@@ -73,5 +73,5 @@ Here is a quick overview of most of the commands that have been added
 ## Example
 Here is an example of my desktop using pywal to set the background and colours. This will change depending on what background you use. Programs used here are Ranger, htop, neofetch and vim
 <p align="center">
-  <img src="https://picload.org/image/dgpodoiw/2017-10-16-203920_1920x1080_sc.png"/>
+  <img src="https://picload.org/image/dgpodoir/2017-10-16-204048_1920x1080_sc.png"/>
 </p>
