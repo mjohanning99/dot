@@ -116,4 +116,5 @@ go/
 i3wm-themer/
 package-lock.json
 searchy
-
+/.config/ranger/bookmarks
+/.config/ranger/history

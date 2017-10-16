@@ -33,3 +33,4 @@ shell mkdir -p jpg; mv %s $_ #mvt to move selected files to a specified director
 run
 ;q
 shell mkdir -p other; mv %s $_ #mvt to move selected files to a specified directory
+mkdir tif
