@@ -48,6 +48,11 @@ Here is a quick overview of most of the commands that have been added
     <td>Will delete selected files</td>
   </tr>
   <tr>
+    <td>Ranger</td>
+    <td>exe mexe</td>
+    <td>Start selected executeable file (exe) or make file executeable (mexe)</td>
+  </tr>
+  <tr>
     <td>Vim</td>
     <td>\' \" \( \[</td>
     <td>Will create (in insert mode) two of the symbol behind \ and place user inside of them</td>
