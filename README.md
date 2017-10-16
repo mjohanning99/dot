@@ -7,10 +7,60 @@ The advantage of using Github to manage your config file is that you can go back
 
 ## How can I use these files?
 In order to use these config files, you should firstly create a backup of your current config files (I recommend using git and Github for that as well. If that is too complicated, just rename them to something like configname.copy). After having created a backup of all important config files, you simply need to replace all all your files with the ones in this repository.
-**_DISCLAIMER! USE AT OWN RISK!** I cannot be made responsible for any harm done to your computer_
+_**DISCLAIMER! USE AT OWN RISK!** I cannot be made responsible for any harm done to your computer_
 
 ## Keybindings
 These config files also include a large number of keybindings that have been tweaked or added to my liking. When using my configuration, please be aware that the keybindings that you are used to might have been changed.
+Here is a quick overview of most of the commands that have been added 
+
+<table>
+  <tr>
+    <th>Program</th>
+    <th>Command</th>
+    <th>Function</th>
+  </tr>
+  <tr>
+    <td>Ranger</td>
+    <td>CC</td>
+    <td>Pressing CC (change colour) when over an image file will start pywal using that image</td>
+  </tr>
+  <tr>
+    <td>Ranger</td>
+    <td>gPc, gDd, gDc ... (more <a href="https://github.com/Jeytas/dot/blob/master/.config/ranger/rc.conf#L322">here</a>)</td>
+    <td>Pressing these button combinations will take you to a specified directory (g => goto), for example gPc => goto Pictures</td>
+  </tr>
+  <tr>
+    <td>Ranger</td>
+    <td>mvt (+directory)</td>
+    <td>Pressing this button combination over any file (mvt => move to) and then specifying a directory will move said file to said directory</td>
+  </tr>
+  <tr>
+    <td>Ranger</td>
+    <td>mvP, mvDc, mvPw</td>
+    <td>Will move selected file(s) to either ~/Pictures (mvP), ~/Documents (mvDc) or ~/Pictures/wallpapers (mvPw) (</td>
+  </tr>
+  <tr>
+    <td>Ranger</td>
+    <td>dl</td>
+    <td>Will delete selected files</td>
+  </tr>
+  <tr>
+    <td>Vim</td>
+    <td>\' \" \( \[</td>
+    <td>Will create (in insert mode) two of the symbol behind \ and place user inside of them</td>
+  </tr>
+  <tr>
+    <td>i3-gaps</td>
+    <td>Mod+Shift+P (+M)</td>
+    <td>Will increase (+P) or decrease (+M) outer gap size</td>
+  </tr>
+  <tr>
+    <td>i3-gaps</td>
+    <td>Mod+CTRL+P (+M)</td>
+    <td>Will increase (+P) or decrease (+M) inner gap size</td>
+  </tr>
+</table>
+
 
 ## Example
 Here is an example of my desktop using pywal to set the background and colours. This will change depending on what background you use. Programs used here are Ranger, htop, neofetch and vim
