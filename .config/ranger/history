@@ -23,7 +23,6 @@ shell mkdir -p Wdg; mv %s $_ #gp to move selected files to a specified directory
 shell mkdir ; mv %s $_ #gp to move selected files to a specified directory
 __q
 1
-
 shell mkdir -p starwars; mv %s $_ #gp to move selected files to a specified directory
 shell mkdir -p starwars; mv %s $_ #mvt to move selected files to a specified directory
 shell mkdir -p cyberpunk; mv %s $_ #mvt to move selected files to a specified directory
@@ -34,3 +33,6 @@ run
 ;q
 shell mkdir -p other; mv %s $_ #mvt to move selected files to a specified directory
 mkdir tif
+open_with 
+find 
+
