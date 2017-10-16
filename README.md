@@ -1,2 +1,2 @@
 # dot
-This is a collection of dotfiles that are important for me to keep track of and which I need to be able to download quickly
+This is a collection of dotfiles that are important for me to keep track of and which I need to be able to download quickly. It is quite possible that some of these configurations won't work with you out-of-the box because you are missing certain programs that are required for it to run. If you do decide to try these out on your own machine, I highly recommend using backups and I cannot be made responsible for any damage done to your computer after copying these configuration files. USE AT OWN RISK!
