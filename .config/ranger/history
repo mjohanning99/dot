@@ -1,4 +1,8 @@
 shell 
 nano
-delete
 shellqq
+
+gp starwars
+open_with
+shell mkdir -p starwars; mv %s $_
+delete

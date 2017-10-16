@@ -16,6 +16,7 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'vim-syntastic/syntastic' "Syntax check
 Plugin 'scrooloose/nerdtree' "NerdTree, file tree 
 Plugin 'ctrlpvim/ctrlp.vim' "CtrlP
+"Plugin 'dylanaraps/wal.vim' "Pywal
 
 " All of your Plugins must be added before the following line
 call vundle#end()           
@@ -41,8 +42,9 @@ imap <leader>[ []<ESC>i
 
 "Colour stuff
 syntax on
-"color gruvbox
-color deus
+"color gruvboxo
+"color deus
+"colorscheme wal
 
 "Other
 set tabstop=4
