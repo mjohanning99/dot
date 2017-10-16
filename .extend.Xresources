@@ -35,10 +35,9 @@
 *.color7:       #f2f1b9
 *.color15:      #f6f6c9
 
-
-URxvt.internalBorder: 6
-
-URxvt.internalBorder: 6
+! URxvt.internalBorder: 6
+URxvt.externalBorder: 0
+URxvt.internalBorder:0
 URxvt.font: xft:Source Code Pro:pixelsize=13:Regular:hinting=True;antialias:True
 URxvt.geometry: 160x40
 URxvt.depth: 32

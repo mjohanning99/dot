@@ -1,5 +1,6 @@
 #.dmenurc#
 node_modules
+Videos/	
 .irssi
 .ssh
 .Xauthority
@@ -10,6 +11,11 @@ node_modules
 .bash_profile
 .bashrc
 .cache/
+.config/Trolltech.conf
+.config/pavucontrol.ini
+.config/pulse/
+.esd_auth
+.ssr/
 .config/libreoffice
 .config/Thunar
 .config/PhotoQt
