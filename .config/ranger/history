@@ -1,8 +1,10 @@
 shell 
 nano
 shellqq
-
 gp starwars
 open_with
 shell mkdir -p starwars; mv %s $_
 delete
+
+cd gm
+shell mkdir -p ; mv %s $_ #gp to move selected files to a specified directory
