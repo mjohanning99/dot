@@ -3,7 +3,7 @@
 Dotfiles get their name from the letter they start with, which is a dot. They are files that are hidden by default and often used for config files.
 
 ## Why are these dotfiles here?
-The advantage of using Github to manage your config file is that you can go back to any change that has been made and, if needed, download the old version and replace it with a new, possibly broken, version on your computer. It can also be used to quickly download (or git clone) all config files you need to get started on a new computer. Lastly, it is a lot easier to share your always updated config files with other people.
+The advantage of using Github to manage your config files is that you can go back to any change that has been made and, if needed, download the old version and replace it with a new, possibly broken, version on your computer. It can also be used to quickly download (or git clone) all config files you need to get started on a new computer. Lastly, it is a lot easier to share your always updated config files with other people.
 
 ## How can I use these files?
 In order to use these config files, you should firstly create a backup of your current config files (I recommend using git and Github for that as well. If that is too complicated, just rename them to something like configname.copy). After having created a backup of all important config files, you simply need to replace all all your files with the ones in this repository.
@@ -37,7 +37,7 @@ Here is a quick overview of most of the commands that have been added
   <tr>
     <td>Ranger</td>
     <td>mvP, mvDc, mvPw</td>
-    <td>Will move selected file(s) to either ~/Pictures (mvP), ~/Documents (mvDc) or ~/Pictures/wallpapers (mvPw) (</td>
+    <td>Will move selected file(s) to either ~/Pictures (mvP), ~/Documents (mvDc) or ~/Pictures/wallpapers (mvPw)</td>
   </tr>
   <tr>
     <td>Ranger</td>
