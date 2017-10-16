@@ -9,6 +9,9 @@ The advantage of using Github to manage your config files is that you can go bac
 In order to use these config files, you should firstly create a backup of your current config files (I recommend using git and Github for that as well. If that is too complicated, just rename them to something like configname.copy). After having created a backup of all important config files, you simply need to replace all all your files with the ones in this repository.
 _**DISCLAIMER! USE AT OWN RISK!** I cannot be made responsible for any harm done to your computer_
 
+## Fonts
+Fonts are not included in this repository. The font I use for my Terminal (URxvt) is Adobe's _Source Code Pro_. You will need to download that yourself using your file manager.
+
 ## Keybindings
 These config files also include a large number of keybindings that have been tweaked or added to my liking. When using my configuration, please be aware that the keybindings that you are used to might have been changed.
 Here is a quick overview of most of the commands that have been added 
