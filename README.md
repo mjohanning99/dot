@@ -18,12 +18,15 @@ The .vimrc contains several plug-ins that are used with Vundle. Vundle should al
 `:PluginInstall`. 
 This will automatically install all the plug-ins and you don't need to worry about doing anything else.
 
+If this doesn't work, I would recommend re-downloading Vundle by simple cloning the repository and moving it into the right place by typing `git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim` into your terminal. Afterwards, please try to run `:PluginInstall` once again.
+
 ### How to get my set-up
-In order to use these config files, you should firstly create a backup of your current config files (I recommend using git and Github for that as well. If that is too complicated, just rename them to something like configname.copy). After having created a backup of all important config files, you simply need to replace all all your files with the ones in this repository.
+In order to use these config files, you should firstly create a backup of your current config files (I recommend using git and Github for that as well. If that is too complicated, just rename them to something like configname.copy). After having created a backup of all important config files, you simply need to replace all all your files with the ones in this repository. Some config files have my username included, which means that if you try to run said config file you will most likely run into an error. Should you run into an error when running a config file or should something not work as intended, please check the config file and see if it includes my username and remove it.
+
 _**DISCLAIMER! USE AT OWN RISK!** I cannot be made responsible for any harm done to your computer_
 
 ## Fonts
-Fonts are not included in this repository. The font I use for my Terminal (URxvt) is Adobe's _Source Code Pro_. You will need to download that yourself using your file manager.
+Fonts are not included in this repository. The font I use for my Terminal (URxvt) is Adobe's _Source Code Pro_. You will need to download that yourself using your package manager.
 
 ## Keybindings
 These config files also include a large number of keybindings that have been tweaked or added to my liking. When using my configuration, please be aware that the keybindings that you are used to might have been changed.
