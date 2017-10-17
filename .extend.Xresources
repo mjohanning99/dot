@@ -39,7 +39,7 @@
 URxvt.externalBorder: 0
 URxvt.internalBorder:0
 URxvt.font: xft:Source Code Pro:pixelsize=13:Regular:hinting=True;antialias:True
-URxvt.geometry: 160x40
+URxvt.geometry: 110x25
 URxvt.depth: 32
 URxvt.background:	[100]#2f2f38
 URxvt*scrollBar:                      false
