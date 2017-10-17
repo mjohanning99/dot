@@ -1,4 +1,7 @@
-#.dmenurc#
+\#.dmenurc#
+.gksu.lock
+.viminfo.tmp
+1
 node_modules
 Videos/	
 .irssi
