@@ -49,7 +49,7 @@ syntax on
 colorscheme wal
 
 "Other
-set tabstop=4
+set tabstop=2
 set number "line numbers enabled
 set hlsearch "highlight all occurences of a word that was searched
 "let mapleader="-"
