@@ -122,4 +122,11 @@ searchy
 .config/ranger/bookmarks
 .config/ranger/history
 *.swp
-.config/qutebrowser
+.config/uzbl
+.furoshiki
+.perlbrew
+.putty
+.swt
+.viminfz.tmp
+.vimperator/
+perl5/
