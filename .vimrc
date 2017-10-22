@@ -29,18 +29,22 @@ let g:airline_theme='luna'
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
 
+"Source scripts
+:source ~/.vim/scripts/rnutoggle.vim "Toggle relative numbers
+
 "Key Mapping 
 map <C-n> :NERDTreeToggle<CR>
-nmap <C-l> :set invnumber <CR> 
+nmap <C-l> :call ToggleRelativeNumbers()
 let g:ctrlp_map = '<c-p>' " For CtrlP Plugin
 let g:ctrlp_cmd = 'CtrlP' 
 "leader plus ( will create () and put user inside
-imap <leader>' ''<ESC>i
-imap <leader>" ""<ESC>i
-imap <leader>( ()<ESC>i
-imap <leader>[ []<ESC>i
+imap <leader>' '' <ESC>i
+imap <leader>" "" ESC>i
+imap <leader>( () ESC>i
+imap <leader>[ [] ESC>i
 nmap <C-a> ggVGy<CR> 
 "Ctrl + A will yank entire file
+nmap <Space><Space> <kDivide><+++><CR>diw<ESC>i
 
 "Colour stuff
 syntax on
@@ -51,7 +55,7 @@ colorscheme wal
 "Other
 set tabstop=2
 set number "line numbers enabled
+set relativenumber "Relative line numbers 
 set hlsearch "highlight all occurences of a word that was searched
-"let mapleader="-"
+let mapleader=","
 
-set relativenumber
