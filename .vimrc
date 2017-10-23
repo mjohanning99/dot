@@ -1,4 +1,4 @@
- .vimrc file fs0ciety@fs0ciety MJ
+ ".vimrc file fs0ciety@fs0ciety MJ
 
 set nocompatible            
 filetype off                 
