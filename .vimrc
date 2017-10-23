@@ -1,4 +1,4 @@
-" .vimrc file fs0ciety@fs0ciety MJ
+ .vimrc file fs0ciety@fs0ciety MJ
 
 set nocompatible            
 filetype off                 
@@ -30,34 +30,39 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
 
 "Source scripts
-source ~/.vim/scripts/rnutoggle.vim "Toggle relative numbers
+source ~/.vim/scripts/rnutoggle.vim "Toggle relative numbers (Default on)	
+source ~/.vim/scripts/togglehighlight.vim "Toggle hightlighted search
 
 "Key Mapping
 let mapleader=","
+autocmd FileType ruby nnoremap <leader>c I#<ESC>
+autocmd FileType vim nnoremap <leader>c I"<ESC>
+autocmd FileType vim inoremap <leader>fc function! ()<CR><+++><CR>endfunction<ESC>3b<ESC>i
+autocmd FileType ruby inoremap <leader>fc def ()<CR><+++><CR>end<ESC>3b<ESC>i
 let g:ctrlp_map = '<c-p>' " For CtrlP Plugin
 let g:ctrlp_cmd = 'CtrlP' 
 noremap <C-n> :NERDTreeToggle<CR>
-nnoremap <C-l> :call ToggleRelativeNumbers()
+nnoremap <C-l> :call ToggleRelativeNumbers() 
+nnoremap <C-h> :call ToggleHighlights()
 "Ctrl + A will yank entire file
 nnoremap <C-a> ggVGy<CR> 
 nnoremap <C-z> <ESC>u
-inoremap <C-z> <ESC>u
 "leader plus ( will create () and put user inside
 nnoremap <leader>" viw<ESC>a"<ESC>bi"<ESC>lel
 nnoremap <leader>' viw<ESC>a'<ESC>bi'<ESC>ll
-inoremap <leader>fv function! ()<CR><+++><CR>endfunction<ESC>3b<ESC>i
 nnoremap <Space><Space> <kDivide><+++><CR>ciw
 "- will delete the line and paste it on the line below
 nnoremap - 0y$Do<ESC>p$i<ESC>
+"nnoremap _ 0y$DO<ESC>p$i<ESC>
 "Open .vimrc (ev) and source it (sv)
 nnoremap ev :vsplit $MYVIMRC<CR>
 nnoremap sv :source $MYVIMRC<CR>
 
 "Colour stuff
 syntax on
-"color gruvboxo
-"color deus
 colorscheme wal
+"color gruvbox
+"color deus
 
 "Other
 set tabstop=2
