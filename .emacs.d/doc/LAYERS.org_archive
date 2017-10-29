@@ -1,0 +1,132 @@
+#    -*- mode: org -*-
+
+
+Archived entries from file /home/fs0ciety/.emacs.d/doc/LAYERS.org
+
+
+* Anatomy of a layer
+:PROPERTIES:
+:CUSTOM_ID: anatomy-of-a-layer
+:ARCHIVE_TIME: 2017-10-27 Fr 17:39
+:ARCHIVE_FILE: ~/.emacs.d/doc/LAYERS.org
+:ARCHIVE_CATEGORY: LAYERS
+:END:
+A layer is simply a folder somewhere in Spacemacs' layer search path that
+usually contains these files (listed in loading order).
+
+- =layers.el= :: declare additional layers
+- =packages.el= :: the packages list and configuration
+- =funcs.el= :: all functions used in the layer should be declared here
+- =config.el= :: layer specific configuration
+- =keybindings.el= :: general key bindings
+
+Additionally, for each local package (see the next section), there should be a
+folder =<layer>/local/<package>/= containing the source code for that package.
+Before initializing that package, Spacemacs will add this folder to the load
+path for you.
+
+** layers.el
+This file is the first file to be loaded and this is the place where addtional
+layers can be declared.
+
+For instance is layer A depends on some functionality of layer B then in the
+file =layers.el= of layer A we can add:
+
+#+begin_src emacs-lisp
+(configuration-layer/declare-layer 'B)
+#+end_src
+
+The effect is that B is considered a used layer and will be loaded as if it
+was added to =dotspacemacs-configuration-layers= variables.
+
+** packages.el
+It contains this list of packages of the layer and the actual configuration for
+the packages included in the layer.
+
+This file is loaded after =layers.el=.
+
+It must define a variable called =<layer>-packages=, which should be a list of
+all the packages that this layer needs. Some valid package specifications are
+as follows:
+
+#+begin_src emacs-lisp
+(defconst mylayer-packages
+  '(
+    ;; Get the package from MELPA, ELPA, etc.
+    some-package
+    (some-package :location elpa)
+
+    ;; A local package
+    (some-package :location local)
+
+    ;; A package recipe
+    (some-package :location (recipe
+                             :fetcher github
+                             :repo "some/repo"))
+
+    ;; An excluded package
+    (some-package :excluded t)
+    ))
+#+end_src
+
+The =:location= attribute specifies where the package may be found. Spacemacs
+currently supports packages on ELPA compliant repositories, local packages and
+MELPA recipes (through the Quelpa package). Local packages should reside at =<layer>/local/<package>/=. For information about recipes see the [[https://github.com/milkypostman/melpa#recipe-format][MELPA documentation]].
+
+Packages may be /excluded/ by setting the =:excluded= property to true. This
+will prevent the package from being installed even if it is used by another
+layer.
+
+For each included package, you may define one or more of the following
+functions, which are called in order by Spacemacs to initialize the package.
+
+1. =<layer>/pre-init-<package>=
+2. =<layer>/init-<package>=
+3. =<layer>/post-init-<package>=
+
+It is the responsibility of these functions to load and configure the package in
+question. Spacemacs will do nothing other than download the package and place it
+in the load path for you.
+
+*Note:* A package will not be installed unless at least one layer defines an
+=init= function for it. That is to say, in a certain sense, the =init= function
+does mandatory setup while the =pre-init= and =post-init= functions do optional
+setup. This can be used for managing cross-layer dependencies, which we will
+discuss later.
+
+** funcs.el
+It contains all the defined functions used in the layer.
+
+This file is loaded after  =packages.el= and before =config.el=.
+
+It is good practice to guard the definition of functions to make sure a package
+is actually used. For instance:
+
+#+begin_src emacs-lisp
+(when (configuration-layer/package-usedp 'my-package)
+  (defun spacemacs/my-package-enable () ...)
+  (defun spacemacs/my-package-disable () ...))
+#+end_src
+
+By guarding these functions we avoid to define them in case the package
+`my-package` is not used.
+
+** config.el
+This file configure the layer like declaring layer variables default values
+and setup some other variables related to the layer.
+
+This file is loaded after =funcs.el=.
+
+** keybindings.el
+It contains general key bindings.
+
+This is the last file loaded.
+
+The word /general/ here means /independent of any package/. Since the end user
+can exclude an arbitrary set of packages, you cannot be sure that, just because
+your layer includes a package, that package will necessarily be loaded. For this
+reason, code in these files must be generally safe, regardless of which packages
+are installed.
+
+More on this in the next section.
+
