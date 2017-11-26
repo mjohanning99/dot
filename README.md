@@ -13,6 +13,7 @@ The advantage of using Github to manage your config files is that you can go bac
 3. Ranger is the file manager I use. I am not sure whether it comes pre-installed with most Linux distributions, so please check whether Ranger has been installed. (if you want to use my ranger configs)
 4. [Pywal](https://github.com/dylanaraps/pywal) is highly recommended for changing backgrounds and colours on the fly (especially with my Ranger shortcut)
 5. My main editor is Spacemacs, so if you want to use the .emacs.d and .spacemacs files, you need to install Spacemacs (and Emacs)
+6. The mdv program
 
 ### ¹Vim Plugins
 The .vimrc contains several plug-ins that are used with Vundle. Vundle should already be included with the configuration files. However, in order to be able to use these plug-ins you need to start vim and type
@@ -60,6 +61,16 @@ Here is a quick overview of most of the commands that have been added
     <td>Will move selected file(s) to either ~/Pictures (mvPc), ~/Documents (mvDc) or ~/Pictures/wallpapers (mvPw)</td>
   </tr>
   <tr>
+    <td>Ranger</td>
+    <td>cpPc, cpDc, cpPw...</td>
+    <td>Will copy selected file(s) to either ~/Pictures (mvPc), ~/Documents (mvDc) or ~/Pictures/wallpapers (mvPw)</td>
+  </tr>
+  <tr>
+  <tr>
+    <td>Ranger</td>
+    <td>oM, oE, oV, oW<td>
+    <td>oM parses a markdown file using mdv and displays it using w3m – the others open the selected file using Emacs, Vim or w3m respectively</td>
+  </tr>
     <td>Ranger</td>
     <td>cpPc, cpDc, cpPw...</td>
     <td>Will copy selected file(s) to either ~/Pictures (mvPc), ~/Documents (mvDc) or ~/Pictures/wallpapers (mvPw)</td>
