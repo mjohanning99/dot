@@ -12,6 +12,7 @@ The advantage of using Github to manage your config files is that you can go bac
 2. Vim is pre-installed on most Linux distributions, however I use Vim in the terminal. I am not sure if any of the configs work with gVim or neoVim or any of the other types of vim. (if you want to use my .vim configs)¹
 3. Ranger is the file manager I use. I am not sure whether it comes pre-installed with most Linux distributions, so please check whether Ranger has been installed. (if you want to use my ranger configs)
 4. [Pywal](https://github.com/dylanaraps/pywal) is highly recommended for changing backgrounds and colours on the fly (especially with my Ranger shortcut)
+5. My main editor is Spacemacs, so if you want to use the .emacs.d and .spacemacs files, you need to install Spacemacs (and Emacs)
 
 ### ¹Vim Plugins
 The .vimrc contains several plug-ins that are used with Vundle. Vundle should already be included with the configuration files. However, in order to be able to use these plug-ins you need to start vim and type
@@ -55,8 +56,13 @@ Here is a quick overview of most of the commands that have been added
   </tr>
   <tr>
     <td>Ranger</td>
-    <td>mvP, mvDc, mvPw</td>
-    <td>Will move selected file(s) to either ~/Pictures (mvP), ~/Documents (mvDc) or ~/Pictures/wallpapers (mvPw)</td>
+    <td>mvPc, mvDc, mvPw...</td>
+    <td>Will move selected file(s) to either ~/Pictures (mvPc), ~/Documents (mvDc) or ~/Pictures/wallpapers (mvPw)</td>
+  </tr>
+  <tr>
+    <td>Ranger</td>
+    <td>cpPc, cpDc, cpPw...</td>
+    <td>Will copy selected file(s) to either ~/Pictures (mvPc), ~/Documents (mvDc) or ~/Pictures/wallpapers (mvPw)</td>
   </tr>
   <tr>
     <td>Ranger</td>
@@ -74,16 +80,6 @@ Here is a quick overview of most of the commands that have been added
     <td>Creates a backup file (filename.ending_bk) for the files selected</td>
   </tr>
   <tr>
-    <td>Vim</td>
-    <td>\' \" \( \[</td>
-    <td>Will create (in insert mode) two of the symbol behind \ and place user inside of them</td>
-  </tr>
-  <tr>
-    <td>Vim</td>
-    <td>CTRL+A</td>
-    <td>Will yank entire file (normal mode)</td>
-  </tr>
-  <tr>
     <td>i3-gaps</td>
     <td>Mod+Shift+P (+M)</td>
     <td>Will increase (+P) or decrease (+M) outer gap size</td>
@@ -92,6 +88,11 @@ Here is a quick overview of most of the commands that have been added
     <td>i3-gaps</td>
     <td>Mod+CTRL+P (+M)</td>
     <td>Will increase (+P) or decrease (+M) inner gap size</td>
+  </tr>
+  <tr>
+    <td>i3-gaps</td>
+    <td>Mod+CTRL+M (+T, +S)</td>
+    <td>Will start Emacs, Thunderbird and htop respectively</td>
   </tr>
 </table>
 
