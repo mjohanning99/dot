@@ -19,6 +19,7 @@ Plugin 'ctrlpvim/ctrlp.vim' "CtrlP
 Plugin 'dylanaraps/wal.vim' "Pywal
 Plugin 'tpope/vim-surround'
 Plugin 'christoomey/vim-system-copy'
+Plugin 'JamshedVesuna/vim-markdown-preview'
 
 " All of your Plugins must be added before the following line
 call vundle#end()
@@ -68,6 +69,9 @@ colorscheme wal
 
 "Other
 set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set expandtab
 set number "line numbers enabled
 set relativenumber "Relative line numbers 
 set hlsearch "highlight all occurences of a word that was searched  
