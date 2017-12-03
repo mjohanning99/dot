@@ -38,6 +38,7 @@ source ~/.vim/scripts/togglehighlight.vim "Toggle hightlighted search
 
 "Key Mapping
 let mapleader=","
+let vim_markdown_preview_hotkey='<C-m>'
 autocmd FileType ruby nnoremap <leader>c I#<ESC>
 autocmd FileType vim nnoremap <leader>c I"<ESC>
 autocmd FileType vim inoremap <leader>fc function! ()<CR><+++><CR>endfunction<ESC>3b<ESC>i
@@ -76,3 +77,6 @@ set number "line numbers enabled
 set relativenumber "Relative line numbers 
 set hlsearch "highlight all occurences of a word that was searched  
 set noeb vb t_vb= "Beeping can fuck right off
+let vim_markdown_preview_toggle=2
+let vim_markdown_preview_browser='Firefox'
+let vim_markdown_preview_github=1
