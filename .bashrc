@@ -4,7 +4,16 @@
 
 #Own settings
 function cdn() { for i in `seq $1`; do cd ..; done; }
+ranger() {
+  if [ -z "$RANGER_LEVEL" ]; then
+    /usr/bin/ranger "$@"
+  else
+    exit
+  fi
+}
 alias grep="grep -E"
+alias starttor="cd ~/Tor/ ; ./start-tor-browser.desktop"
+alias weather="ansiweather"
 (wal -r &)
 
 [[ $- != *i* ]] && return
@@ -55,12 +64,3 @@ alias updatext="bash ~/.ruxt/lib/bin/update.sh"
 alias xt="ruby ~/.ruxt/lib/bin/extract.rb"
 alias updatetldr="bash ~/.rtldr/lib/bin/update.sh"
 alias tldr="ruby ~/.rtldr/tldr"
-alias starttor="cd ~/Tor/ ; ./start-tor-browser.desktop"
-alias weather="ansiweather"
-ranger() {
-    if [ -z "$RANGER_LEVEL" ]; then
-        /usr/bin/ranger "$@"
-    else
-        exit
-    fi
-}
