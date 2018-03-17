@@ -2,22 +2,6 @@
 # ~/.bashrc
 #
 
-#cdn + number will move to the xth parent directory (cdn 2 = cd ../..)
-function cdn() { for i in `seq $1`; do cd ..; done; }
-
-#Prevent nested ranger instances
-ranger() {
-  if [ -z "$RANGER_LEVEL" ]; then
-    /usr/bin/ranger "$@"
-  else
-    exit
-  fi
-}
-
-
-#For Pywal
-(wal -r &) 2> bloodyerror.log 
-
 [[ $- != *i* ]] && return
 
 colors() {
@@ -52,7 +36,7 @@ colors() {
 [ -r /usr/share/bash-completion/bash_completion   ] && . /usr/share/bash-completion/bash_completion
 
 #Aliases
-alias  xf="ruby ~/:;#"
+alias xf="ruby ~/:;#"
 alias updatext="bash ~/.ruxt/lib/bin/update.sh"
 alias xt="ruby ~/.ruxt/lib/bin/extract.rb"
 alias updatetldr="bash ~/.rtldr/lib/bin/update.sh"
@@ -76,3 +60,18 @@ export VISUAL=vim
 export EDITOR="$VISUAL"
 PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 export PATH="$PATH:$HOME/.rvm/bin" #Must be the last PATH change!
+
+#cdn + number will move to the xth parent directory (cdn 2 = cd ../..)
+function cdn() { for i in `seq $1`; do cd ..; done; }
+
+#Prevent nested ranger instances
+ranger() {
+  if [ -z "$RANGER_LEVEL" ]; then
+    /usr/bin/ranger "$@"
+  else
+    exit
+  fi
+}
+
+#For Pywal
+(wal -r &) 2> bloodyerror.log #Ranger says it's deprecated and it keeps annoying me with this error
