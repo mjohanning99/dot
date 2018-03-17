@@ -2,8 +2,10 @@
 # ~/.bashrc
 #
 
-#Own settings
+#cdn + number will move to the xth parent directory (cdn 2 = cd ../..)
 function cdn() { for i in `seq $1`; do cd ..; done; }
+
+#Prevent nested ranger instances
 ranger() {
   if [ -z "$RANGER_LEVEL" ]; then
     /usr/bin/ranger "$@"
@@ -11,10 +13,10 @@ ranger() {
     exit
   fi
 }
-alias grep="grep -E"
-alias starttor="cd ~/Tor/ ; ./start-tor-browser.desktop"
-alias weather="ansiweather"
-(wal -r &)
+
+
+#For Pywal
+(wal -r &) 2> bloodyerror.log 
 
 [[ $- != *i* ]] && return
 
@@ -48,19 +50,29 @@ colors() {
 [[ -f ~/.extend.bashrc ]] && . ~/.extend.bashrc
 
 [ -r /usr/share/bash-completion/bash_completion   ] && . /usr/share/bash-completion/bash_completion
-PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
-export VISUAL=vim
-export EDITOR="$VISUAL"
+
+#Aliases
 alias  xf="ruby ~/:;#"
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
-
-export PATH=/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/fs0ciety/.rvm/bin:/home/fs0ciety/.rvm/bin:/home/fs0ciety/.vimpkg/bin
-
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
-source /home/fs0ciety/perl5/perlbrew/etc/bashrc
 alias updatext="bash ~/.ruxt/lib/bin/update.sh"
 alias xt="ruby ~/.ruxt/lib/bin/extract.rb"
 alias updatetldr="bash ~/.rtldr/lib/bin/update.sh"
 alias tldr="ruby ~/.rtldr/tldr"
+
+#Always use grep -E instead of regular grep
+alias grep="grep -E"
+
+#Always start rtv using the media flag
+alias rtv="rtv --enable-media"
+
+#Alias for starting the Tor Browser
+alias starttor="cd ~/Tor/ ; ./start-tor-browser.desktop"
+
+#Alias for viewing the weather
+alias weather="ansiweather"
+
+# Other environment variable changes
+export RTV_BROWSER=w3m
+export VISUAL=vim
+export EDITOR="$VISUAL"
+PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
+export PATH="$PATH:$HOME/.rvm/bin" #Must be the last PATH change!

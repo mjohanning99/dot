@@ -66,19 +66,35 @@ bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart du
 bindsym Print exec --no-startup-id i3-scrot
 bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
 bindsym Shift+Print --release exec --no-startup-id i3-scrot -s
-bindsym $mod+Ctrl+M --release exec emacs
-bindsym $mod+Ctrl+T --release exec thunderbird
-bindsym $mod+Ctrl+S --release exec terminal -e "htop"
 #bindsym $mod+Shift+h exec xdg-open /usr/share/doc/manjaro/i3_help.pdf
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
+
+#Mode for starting applications
+set $mode_launcher Launch: [t]hunderbird, [h]top, [e]macs, [n]autilus, [c]alibre, [a]tom, [d]iscord, [r]eddit
+bindsym $mod+Ctrl+e mode "$mode_launcher"
+
+mode "$mode_launcher" {
+  bindsym t exec thunderbird
+  bindsym h exec terminal -e "htop"
+  bindsym e exec emacs
+  bindsym n exec nautilus
+  bindsym c exec calibre
+  bindsym a exec atom
+  bindsym d exec discord
+  bindsym r exec terminal -e "rtv"
+
+  bindsym Escape mode "default"
+  bindsym Return mode "default"
+}
+
 
 # focus_follows_mouse no
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -87,10 +103,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+semicolon move right
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -104,8 +120,6 @@ bindsym $mod+b workspace back_and_forth
 bindsym $mod+Shift+b move container to workspace back_and_forth; workspace back_and_forth
 
 # split orientation
-bindsym $mod+h split h;exec notify-send 'tile horizontally'
-bindsym $mod+v split v;exec notify-send 'tile vertically'
 bindsym $mod+q split toggle
 
 # toggle fullscreen mode for the focused container
@@ -217,6 +231,7 @@ for_window [class="Timeset-gui"] floating enable border normal
 for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
 for_window [class="Viewnior"] floating enable
+for_window [class="feh"] floating enable
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
@@ -290,6 +305,7 @@ exec --no-startup-id start_conky_maia
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 exec --no-startup-id compton
+exec --no-startup-id ibus-daemon
 
 # Color palette used for the terminal ( ~/.extend.Xresources file )
 # Colors are gathered based on the documentation:
